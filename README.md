@@ -8,7 +8,7 @@ You can use the following guide to learn how and why to create a pull request.
 
 A pull request is a way to suggest changes to a repository. When you create a pull request, you propose your changes and request that someone review and pull in your contribution and merge them into their branch. Pull requests show differences between the content from both branches and the changes are visible in the repository.
 
-<!-- TODO: Add information on PRs and forks. -->
+What is a fork? A fork is creates a clone and a new remote repo on github (which has a reference to its original source). Pull requests can be done for forks or branches with the objective of contributing to the original project.
 
 ## Set up your environment
 
@@ -31,7 +31,7 @@ cp ~/Downloads/README.md .
 2. In the upper-right corner of any page, select `➕`, and then select `New repository`.
 3. Name your repository `my-first-pr`.
    **IMPORTANT:** Do not initialize the repository with a `README`, `.gitignore`, or license.
-4. Note the name of your repository `URL` here: **<URL>**
+4. Note the name of your repository `URL` here: https://github.com/mcawezome/my-first-pr
    You'll need this information later.
 
 ### Add the remote repository
@@ -60,11 +60,9 @@ git remote -v
 
 5. Refresh the GitHub page for your repository. You should see this `README.md` file.
 
-### Why are pull requests called "Pull Requests"? (wrong answer)
+### Why are pull requests called "Pull Requests"? 
 
-Pull requests are so named basically because you are asking to _pull_ changes from a remote to your local repository. And that's because you have to ask permission to copy changes out of the repository, even if you have read access to that repository.
-
-<!--TODO: This answer is SO wrong, I think we need to fix it! -->
+Pull requests are so named because the origin repo is _pulling_ from your changed local repo. It is backwards, the origin requests a pull from you!
 
 ### Create a local branch
 
@@ -89,6 +87,7 @@ git commit -am "Give correct reason to why PRs are named that"
 ```
 
 3. Check on GitHub whether the branch exists there or not. Does it? Why or why not?
+Does not display the branch. Changes have not been pushed yet and so do not display on the github webpage.
 4. You may think it is because you haven't pushed to the branch yet, so go ahead and try to push the branch to the remote repository.
 
 ```bash
@@ -102,6 +101,7 @@ fatal: The current branch fix/pr-definition has no upstream branch
 ```
 
 5. What does this error mean? Why did it happen? Git explains how to fix it by running a command that will:
+The upstream remote is not set for this particular branch. Git literally does not know where to push the changes.
    
    1. Create a new branch on the remote repository with the same name as the local branch (if the remote branch doesn't already exist).
    2. Set the local branch to track the remote branch.
