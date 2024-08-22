@@ -31,7 +31,7 @@ cp ~/Downloads/README.md .
 2. In the upper-right corner of any page, select `➕`, and then select `New repository`.
 3. Name your repository `my-first-pr`.
    **IMPORTANT:** Do not initialize the repository with a `README`, `.gitignore`, or license.
-4. Note the name of your repository `URL` here: **<URL>**
+4. Note the name of your repository `URL` here: https://github.com/mcawezome/my-first-pr
    You'll need this information later.
 
 ### Add the remote repository
@@ -60,9 +60,9 @@ git remote -v
 
 5. Refresh the GitHub page for your repository. You should see this `README.md` file.
 
-### Why are pull requests called "Pull Requests"? (wrong answer)
+### Why are pull requests called "Pull Requests"? 
 
-Pull requests are so named basically because you are asking to _pull_ changes from a remote to your local repository. And that's because you have to ask permission to copy changes out of the repository, even if you have read access to that repository.
+Pull requests are so named because the origin repo is _pulling_ from your changed local repo. It is backwards, the origin requests a pull from you!
 
 <!--TODO: This answer is SO wrong, I think we need to fix it! -->
 
