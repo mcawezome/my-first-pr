@@ -87,6 +87,7 @@ git commit -am "Give correct reason to why PRs are named that"
 ```
 
 3. Check on GitHub whether the branch exists there or not. Does it? Why or why not?
+Does not display the branch. Changes have not been pushed yet and so do not display on the github webpage.
 4. You may think it is because you haven't pushed to the branch yet, so go ahead and try to push the branch to the remote repository.
 
 ```bash
@@ -100,6 +101,7 @@ fatal: The current branch fix/pr-definition has no upstream branch
 ```
 
 5. What does this error mean? Why did it happen? Git explains how to fix it by running a command that will:
+The upstream remote is not set for this particular branch. Git literally does not know where to push the changes.
    
    1. Create a new branch on the remote repository with the same name as the local branch (if the remote branch doesn't already exist).
    2. Set the local branch to track the remote branch.
